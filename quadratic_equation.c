@@ -25,12 +25,20 @@ solve_equation( float a,
 
   if( .0f == discriminant )
   {
-    answer.components[ 0 ] = answer.components[ 1 ] = -b / ( 2.f * a );
+    answer.components[ 0 ] =
+    answer.components[ 1 ] = -b
+                             /
+                             ( 2.f * a );
     return answer;
   }
 
-  answer.components[ 0 ] = ( -b + sqrt( discriminant ) ) / ( 2. * a );
-  answer.components[ 1 ] = ( -b - sqrt( discriminant ) ) / ( 2. * a );
+  answer.components[ 0 ] = ( -b + sqrt( discriminant ) )
+                           /
+                           ( 2. * a );
+
+  answer.components[ 1 ] = ( -b - sqrt( discriminant ) )
+                           /
+                           ( 2. * a );
 
   return answer;
 }
