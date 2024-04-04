@@ -16,7 +16,7 @@ solve_equation( float a,
   }
 
   const float
-    discriminant = ( b * b ) - ( 4 * a * c );
+    discriminant = ( b * b ) - ( 4.f * a * c );
 
   if( .0f > discriminant )
   {
