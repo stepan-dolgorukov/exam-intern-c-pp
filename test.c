@@ -10,7 +10,7 @@
 void
 run_cases_with_no_roots( void )
 {
-  /* x^2 + x + 1 = 0 */
+  /* 1 * x^2 + 1 * x + 1 = 0 */
   {
     const struct pair_float
       answer = solve_equation( 1.f,
@@ -32,7 +32,7 @@ run_cases_with_no_roots( void )
     assert( isnan( answer.components[ 1 ] ) );
   }
 
-  /* x^2 - 0.73 * x + 0.137 */
+  /* 1 * x^2 - 0.73 * x + 0.137 = 0 */
   {
     const struct pair_float
       answer = solve_equation( 1.f,
@@ -47,7 +47,7 @@ run_cases_with_no_roots( void )
 void
 run_cases_with_equal_roots( void )
 {
-  /* x^2 + 10x + 25 = (x + 5)^2 = 0 */
+  /* 1 * x^2 + 10 * x + 25 = (x + 5) ^ 2 = 0 */
   {
     const struct pair_float
       answer = solve_equation( 1.f,
@@ -58,7 +58,7 @@ run_cases_with_equal_roots( void )
     assert( answer.components[ 0 ] == answer.components[ 1 ] );
   }
 
-  /* 0.45 * x^2 + 1.5 * x + 1.25 */
+  /* 0.45 * x^2 + 1.5 * x + 1.25 = 0 */
   {
     const struct pair_float
       answer = solve_equation( .45f,
@@ -69,7 +69,7 @@ run_cases_with_equal_roots( void )
     assert( answer.components[ 0 ] == answer.components[ 1 ] );
   }
 
-  /* x^2 = 0 */
+  /* 1 * x^2 + 0 * x + 0 = 0 */
   {
     const struct pair_float
       answer = solve_equation( 1.f,
@@ -84,7 +84,7 @@ run_cases_with_equal_roots( void )
 void
 run_cases_with_different_roots( void )
 {
-  /* 4x^2 + 5x + 1 = 0 */
+  /* 4 * x^2 + 5 * x + 1 = 0 */
   {
     const struct pair_float
       answer = solve_equation( 4.f,
