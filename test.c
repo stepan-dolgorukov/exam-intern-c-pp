@@ -94,6 +94,17 @@ run_cases_with_different_roots( void )
     assert( in_pair_with_precision( -.25f, &answer, PRECISION ) );
     assert( in_pair_with_precision( -1.f, &answer, PRECISION ) );
   }
+
+  /* 127 * x^2 + 870 * x + 2 = 0 */
+  {
+    const struct pair_float
+      answer = solve_equation( 127.f,
+                               870.f,
+                               2.f  );
+
+    assert( in_pair_with_precision( -.0023f, &answer, PRECISION ) );
+    assert( in_pair_with_precision( -6.848094f, &answer, PRECISION ) );
+  }
 }
 
 int
