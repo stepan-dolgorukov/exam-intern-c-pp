@@ -31,14 +31,14 @@ pair_float.o: \
 pair_float.o: \
 	pair_float.h
 
-test.o: \
-	test.c
+check.o: \
+	check.c
 
 	${compiler_c} \
 		-c ${^}
 
-test: \
-	test.o
+check: \
+	check.o
 
 	${compiler_c} \
 		-L${PWD} \
