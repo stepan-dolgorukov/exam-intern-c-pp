@@ -10,7 +10,6 @@ struct pair_float
 
 bool
 in_pair( float value,
-         const struct pair_float* pair
-                                       );
+         const struct pair_float* pair );
 
 #endif
