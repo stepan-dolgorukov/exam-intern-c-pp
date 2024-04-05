@@ -13,8 +13,8 @@ in_pair( float value,
          const struct pair_float* pair );
 
 bool
-in_pair_approximately( float value,
-                       const struct pair_float* pair,
-                       float precision                );
+in_pair_with_precision( float value,
+                        const struct pair_float* pair,
+                        float precision                );
 
 #endif

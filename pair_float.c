@@ -32,9 +32,9 @@ in_pair( float value,
 }
 
 bool
-in_pair_approximately( float value,
-                       const struct pair_float* pair,
-                       float precision                )
+in_pair_with_precision( float value,
+                        const struct pair_float* pair,
+                        float precision                )
 {
   /* Если пара отсутствует, то в ней не может содержаться любой элемент. */
   if( NULL == pair )
