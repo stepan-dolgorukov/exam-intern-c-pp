@@ -14,7 +14,7 @@ main( void )
     const struct pair_float
       answer = solve_equation( 1.f, 10.f, 25.f );
 
-    assert( -5.f == answer.components[ 0 ] &&
+    assert( in_pair( -5.0f, &answer ) &&
             answer.components[ 0 ] == answer.components[ 1 ] );
   }
 
@@ -32,11 +32,8 @@ main( void )
     const struct pair_float
       answer = solve_equation( 4.f, 5.f, 1.f );
 
-    assert( ( -.25f == answer.components[ 0 ] &&
-              -1.f == answer.components[ 1 ]     ) ||
-
-            ( -1.f == answer.components[ 1 ] &&
-              -.25f == answer.components[ 0 ]   )     );
+    assert( in_pair( -.25f, &answer ) &&
+            in_pair( -1.f, &answer )     );
   }
 
   return 0;
