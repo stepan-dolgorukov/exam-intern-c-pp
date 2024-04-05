@@ -54,8 +54,8 @@ run_cases_with_equal_roots( void )
                                10.f,
                                25.f  );
 
-    assert( in_pair( -5.0f, &answer ) &&
-            answer.components[ 0 ] == answer.components[ 1 ] );
+    assert( in_pair_approximately( -5.0f, &answer, PRECISION ) &&
+            answer.components[ 0 ] == answer.components[ 1 ]      );
   }
 
   /* 0.45 * x^2 + 1.5 * x + 1.25 */
@@ -65,8 +65,8 @@ run_cases_with_equal_roots( void )
                                1.5f,
                                1.25f );
 
-    assert( fabsf( ( -5.f / 3.f ) - answer.components[ 0 ] ) < PRECISION &&
-            answer.components[ 0 ] == answer.components[ 1 ] );
+    assert( in_pair_approximately( -5.f / 3.f, &answer, PRECISION ) &&
+            answer.components[ 0 ] == answer.components[ 1 ]     );
   }
 
   /* x^2 = 0 */
@@ -76,8 +76,8 @@ run_cases_with_equal_roots( void )
                                0.f,
                                0.f  );
 
-    assert( fabsf( 0.f - answer.components[ 0 ] ) < PRECISION &&
-            answer.components[ 0 ] == answer.components[ 1 ] );
+    assert( in_pair_approximately( 0.0f, &answer, PRECISION ) &&
+            answer.components[ 0 ] == answer.components[ 1 ]     );
   }
 }
 
@@ -91,8 +91,8 @@ run_cases_with_different_roots( void )
                                5.f,
                                1.f  );
 
-    assert( in_pair( -.25f, &answer ) &&
-            in_pair( -1.f, &answer )     );
+    assert( in_pair_approximately( -.25f, &answer, PRECISION ) &&
+            in_pair_approximately( -1.f, &answer, PRECISION )     );
   }
 }
 
