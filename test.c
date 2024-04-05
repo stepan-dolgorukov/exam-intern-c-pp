@@ -16,6 +16,24 @@ run_cases_with_no_roots( void )
     assert( isnan( answer.components[ 0 ] ) &&
             isnan( answer.components[ 1 ] )    );
   }
+
+  /* 8592.5 * x^2 + 327.12 * x + 3.125 = 0 */
+  {
+    const struct pair_float
+      answer = solve_equation( 8592.5f, 327.12f, 3.125f );
+
+    assert( isnan( answer.components[ 0 ] ) &&
+            isnan( answer.components[ 1 ] )    );
+  }
+
+  /* x^2 - 0.73 * x + 0.137 */
+  {
+    const struct pair_float
+      answer = solve_equation( 1.f, 0.73f, 0.137f );
+
+    assert( isnan( answer.components[ 0 ] ) &&
+            isnan( answer.components[ 1 ] )    );
+  }
 }
 
 void
