@@ -8,7 +8,7 @@
 #define PRECISION ( 1e-6 )
 
 void
-run_cases_with_no_roots( void )
+assert_cases_with_no_roots( void )
 {
   /* 1 * x^2 + 1 * x + 1 = 0 */
   {
@@ -45,7 +45,7 @@ run_cases_with_no_roots( void )
 }
 
 void
-run_cases_with_equal_roots( void )
+assert_cases_with_equal_roots( void )
 {
   /* 1 * x^2 + 10 * x + 25 = (x + 5) ^ 2 = 0 */
   {
@@ -94,7 +94,7 @@ run_cases_with_equal_roots( void )
 }
 
 void
-run_cases_with_different_roots( void )
+assert_cases_with_different_roots( void )
 {
   /* 4 * x^2 + 5 * x + 1 = 0 */
   {
@@ -155,9 +155,9 @@ run_cases_with_different_roots( void )
 int
 main( void )
 {
-  run_cases_with_no_roots(  );
-  run_cases_with_equal_roots(  );
-  run_cases_with_different_roots(  );
+  assert_cases_with_no_roots(  );
+  assert_cases_with_equal_roots(  );
+  assert_cases_with_different_roots(  );
 
   return 0;
 }
