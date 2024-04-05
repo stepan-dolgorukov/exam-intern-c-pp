@@ -5,6 +5,8 @@
 #include "quadratic_equation.h"
 #include "pair_float.h"
 
+#define PRECISION ( 1e-6 )
+
 void
 run_cases_with_no_roots( void )
 {
@@ -63,7 +65,7 @@ run_cases_with_equal_roots( void )
                                1.5f,
                                1.25f );
 
-    assert( fabsf( ( -5.f / 3.f ) - answer.components[ 0 ] ) < 1e-6f &&
+    assert( fabsf( ( -5.f / 3.f ) - answer.components[ 0 ] ) < PRECISION &&
             answer.components[ 0 ] == answer.components[ 1 ] );
   }
 
@@ -74,7 +76,7 @@ run_cases_with_equal_roots( void )
                                0.f,
                                0.f  );
 
-    assert( fabsf( 0.f - answer.components[ 0 ] ) < 1e-6f &&
+    assert( fabsf( 0.f - answer.components[ 0 ] ) < PRECISION &&
             answer.components[ 0 ] == answer.components[ 1 ] );
   }
 }
