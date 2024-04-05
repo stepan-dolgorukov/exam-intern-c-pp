@@ -55,6 +55,28 @@ run_cases_with_equal_roots( void )
     assert( in_pair( -5.0f, &answer ) &&
             answer.components[ 0 ] == answer.components[ 1 ] );
   }
+
+  /* 0.45 * x^2 + 1.5 * x + 1.25 */
+  {
+    const struct pair_float
+      answer = solve_equation( .45f,
+                               1.5f,
+                               1.25f );
+
+    assert( fabsf( ( -5.f / 3.f ) - answer.components[ 0 ] ) < 1e-6f &&
+            answer.components[ 0 ] == answer.components[ 1 ] );
+  }
+
+  /* x^2 = 0 */
+  {
+    const struct pair_float
+      answer = solve_equation( 1.f,
+                               0.f,
+                               0.f  );
+
+    assert( fabsf( 0.f - answer.components[ 0 ] ) < 1e-6f &&
+            answer.components[ 0 ] == answer.components[ 1 ] );
+  }
 }
 
 void
